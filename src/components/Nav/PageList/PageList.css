@@ -56,18 +56,6 @@
         width: calc(100% - 70px);
         transition: 0.5s;
     }
-
-    .pages-container{
-        position: absolute;
-        width: calc(100% - 140px);
-        height: 100%;
-        left:50%;
-        top: 57%;
-        transform: translate(-50%,-50%);
-        text-align: right;
-        transition: 0.5s;
-        color:white;
-    }
     
     .page-item{
         width: 100%;
