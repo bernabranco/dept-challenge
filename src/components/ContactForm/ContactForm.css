@@ -70,6 +70,11 @@ input:focus, textarea:focus, select:focus{
     transition: 0.5s;
 }
 
+.form-element:hover .form-text{
+    color:blue;
+    transition: 0.5s;
+}
+
 .form-button:hover{
     background-color: red;
     transform: scale(1.1);
@@ -126,6 +131,7 @@ input:focus, textarea:focus, select:focus{
 
     .form-element:hover .form-text{
         color:blue;
+        transition: 0.5s;
     }
 
     .form-button-container{
