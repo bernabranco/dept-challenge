@@ -1,0 +1,53 @@
+.filter-container{
+    position: relative;
+    width:93%;
+    height:150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.filter-text1{
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    font-family: TekoLight;
+    color:grey
+}
+
+.filter-text2{
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    font-family: TekoLight;
+    text-decoration: underline;
+}
+
+.filter-text3{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    font-family: TekoLight;
+    color:grey
+}
+
+.filter-text4{
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    font-family: TekoLight;
+    text-decoration: underline;
+}
+

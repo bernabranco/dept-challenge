@@ -1,0 +1,146 @@
+
+.g5-container{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.g5-ul{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+    width: 90%;
+    height:100%;
+}
+
+.g5-li{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+
+}
+
+.g5-wrapper{
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+    padding: 10px;
+    margin-bottom: 40px;
+    transition: 0.5s;
+}
+
+.g5-container:hover .g5-text {
+    font-size:40px;
+    transition: 0.5s;
+}
+
+.g5-container:hover .g5-company{
+    font-size:20px;
+    transition: 0.5s;
+}
+
+.g5-container:hover {
+    height:100%;
+    transition: 0.5s;
+}
+
+.g5-img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    box-sizing: border-box;
+    margin:0;
+    border-radius: 0;
+}
+
+.g5-company{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    color: grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 80%;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.g5-text{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: TekoSemibold;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.g5-action-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.g5-action{
+    width: 50%;
+    color: blue;
+    font-size: 70%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.g5-icon{
+    width: 20px;
+}
+
+
+@media (max-width:3000px){
+    .g5-container{
+        width:100%;
+    }
+
+    .g5-wrapper{
+        width:40%;
+    }
+}
+
+@media (max-width:1300px){
+    .g5-container{
+        width:100%;
+    }
+
+    .g5-wrapper{
+        width:40%;
+    }
+}
+
+@media (max-width:700px){
+    .g5-container{
+        width:100%;
+    }
+
+    .g5-wrapper{
+        width:100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+

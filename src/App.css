@@ -1,0 +1,60 @@
+body{
+  position:relative;
+  width:100%;
+  height:100vh;
+  margin:0;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+canvas {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+@font-face {
+  font-family: 'TekoBold';
+  src: local('TekoBold'),
+       url('./fonts/Teko-Bold.ttf') format('truetype')
+}
+
+h1 {
+  font-family: TekoLight;
+  margin:0;
+  padding: 0;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*IMPORT FONTS*/
+@font-face {
+  font-family: 'TekoSemiBold';
+  src: local('TekoSemiBold'),
+       url('./fonts/Teko-SemiBold.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'TekoRegular';
+  src: local('TekoRegular'),
+       url('./fonts/Teko-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'TekoMedium';
+  src: local('TekoMedium'),
+       url('./fonts/Teko-Medium.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'TekoLight';
+  src: local('TekoLight'),
+       url('./fonts/Teko-Light.ttf') format('truetype')
+}
+

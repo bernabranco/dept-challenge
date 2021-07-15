@@ -1,0 +1,161 @@
+
+.g4-container{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.g4-ul{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+    width: 90%;
+    height:100%;
+}
+
+.g4-li{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+
+}
+
+.g4-li-no-image{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    list-style: none;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-width:1px;
+    border-color:rgba(200,200,200,0.4)
+
+}
+
+.g4-wrapper{
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+    padding: 10px;
+    margin-bottom: 40px;
+    transition: 0.5s;
+}
+
+.g4-container:hover .g4-text{
+    font-size:40px;
+    transition: 0.5s;
+}
+
+.g4-container:hover .g4-company{
+    font-size:20px;
+    transition: 0.5s;
+}
+
+.g4-wrapper:hover {
+    height:100%;
+    transition: 0.5s;
+}
+
+.g4-img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    margin:0;
+    border-radius: 0;
+}
+
+.g4-company{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    color: grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 80%;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.g4-text{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: TekoSemibold;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.g4-action-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.g4-action{
+    width: 50%;
+    color: blue;
+    font-size: 70%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.g4-icon{
+    width: 20px;
+}
+
+.g4-li:hover {
+    background-color: white;
+    color: black;
+}
+
+@media (max-width:3000px){
+    .g4-container{
+        width:100%;
+    }
+
+    .g4-wrapper{
+        width:20%;
+    }
+}
+
+@media (max-width:1300px){
+    .g4-container{
+        width:100%;
+    }
+
+    .g4-wrapper{
+        width:40%;
+    }
+}
+
+@media (max-width:700px){
+    .g4-container{
+        width:100%;
+    }
+
+    .g4-wrapper{
+        width:100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+

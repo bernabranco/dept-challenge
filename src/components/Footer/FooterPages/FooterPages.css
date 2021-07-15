@@ -1,0 +1,44 @@
+.footer-pages-container{
+    position: relative;
+    width: 60%;
+    height: 50%;
+    font-size: 14px;
+    transition: 1s;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.footer-pages-container:hover .footer-page-item{
+    opacity:0.4;
+    transition: 0.5s;
+}
+
+.footer-pages-container .footer-page-item:hover{
+    opacity:1;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+.footer-page-item{
+    margin-right: 10px;
+}
+
+@media(max-width:800px){
+
+    .footer-pages-container{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        top: 50px;
+        font-size: 25px;
+        transition: 1s;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}

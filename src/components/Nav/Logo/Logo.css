@@ -1,0 +1,16 @@
+.logo-container{
+    position:absolute;
+    width:25%;
+    height:10vh;
+    left:0;
+    top:0;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+ }
+
+ #path-logo{
+     fill:black;
+ }
+
