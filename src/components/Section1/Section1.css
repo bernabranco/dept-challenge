@@ -21,9 +21,8 @@
 
 .header-button:hover{
     background-color: white;
-    border-color: white;
+    border-color: black;
     color:black;
-    transform: scale(1.4);
     transition: 0.5s;
     
 }
