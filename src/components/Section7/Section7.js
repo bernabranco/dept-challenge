@@ -1,10 +1,10 @@
 import {React, useEffect, useState} from 'react'
-import './Gallery3.css'
+import './Section7.css'
 
 import image1 from '../../images/liberty-global.png';
 import image2 from '../../images/arla.png';
 
-export default function Gallery3() {
+export default function Section7() {
 
     useEffect(()=>{
 

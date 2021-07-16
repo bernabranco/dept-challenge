@@ -17,12 +17,6 @@ canvas {
   left: 0;
 }
 
-@font-face {
-  font-family: 'TekoBold';
-  src: local('TekoBold'),
-       url('./fonts/Teko-Bold.ttf') format('truetype')
-}
-
 h1 {
   font-family: TekoLight;
   margin:0;
@@ -56,5 +50,10 @@ p {
   font-family: 'TekoLight';
   src: local('TekoLight'),
        url('./fonts/Teko-Light.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'TekoBold';
+  src: local('TekoBold'), url('./fonts/Teko-Bold.ttf') format('truetype')
 }
 

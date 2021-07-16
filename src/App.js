@@ -1,16 +1,16 @@
 
 import './App.css';
-import React, {useState} from "react";
+import React from "react";
 import Navbar from './components/Nav/Nav.js';
 import Section1 from './components/Section1/Section1.js';
 import Footer from './components/Footer/Footer.js'
 import Filter from './components/Filter/Filter.js'
-import Gallery1 from './components/Gallery1/Gallery1.js'
-import Gallery2 from './components/Gallery2/Gallery2.js'
-import Gallery3 from './components/Gallery3/Gallery3.js'
-import Gallery4 from './components/Gallery4/Gallery4.js'
-import Gallery5 from './components/Gallery5/Gallery5.js'
-import Gallery6 from './components/Gallery6/Gallery6.js'
+import Section2 from './components/Section2/Section2.js'
+import Section3 from './components/Section3/Section3.js'
+import Section4 from './components/Section4/Section4.js'
+import Section5 from './components/Section5/Section5.js'
+import Section6 from './components/Section6/Section6.js'
+import Section7 from './components/Section7/Section7.js'
 import Clients from './components/Clients/Clients.js'
 import ContactForm from './components/ContactForm/ContactForm.js'
 
@@ -23,12 +23,12 @@ function App() {
      <Navbar/>
      <Section1/>
      <Filter/>
-     <Gallery1/>
-     <Gallery4/>
-     <Gallery5/>
-     <Gallery6/>
-     <Gallery2/>
-     <Gallery3/>
+     <Section2/>
+     <Section3/>
+     <Section4/>
+     <Section5/>
+     <Section6/>
+     <Section7/>
      <Clients/>
      <ContactForm/>
      <Footer/>

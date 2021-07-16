@@ -1,11 +1,11 @@
 import {React,useEffect,useState} from 'react'
-import './Gallery5.css'
+import './Section4.css'
 
 import image1 from '../../images/lightning.png';
 import image2 from '../../images/tui.png';
 
 
-export default function Gallery5() {
+export default function Section4() {
 
     useEffect(()=>{
 

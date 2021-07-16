@@ -1,5 +1,5 @@
 import {React,useEffect,useState} from 'react'
-import './Gallery2.css'
+import './Section6.css'
 
 import image1 from '../../images/chocomel.png';
 import image2 from '../../images/jbl.png';
@@ -8,7 +8,7 @@ import image4 from "../../images/koninklijke-bibliotheek.png"
 import icon from "../../icons/icon-dropdown.svg"
 
 
-export default function Gallery2() {
+export default function Section6() {
 
     useEffect(()=>{
 

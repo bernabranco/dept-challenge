@@ -1,5 +1,6 @@
 .filter-container{
     position: relative;
+    top:0;
     width:93%;
     height:150px;
     display: flex;

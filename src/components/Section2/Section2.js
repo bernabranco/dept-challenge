@@ -1,5 +1,5 @@
 import {React, useEffect,useState} from 'react';
-import './Gallery1.css';
+import './Section2.css';
 
 import image1 from '../../images/bolcom.png';
 import image2 from '../../images/kempen.png';
@@ -7,7 +7,7 @@ import image3 from "../../images/philips.png";
 import image4 from "../../images/gemeentemuseum.png";
 
 
-export default function Gallery1() {
+export default function Section2() {
 
     useEffect(()=>{
 

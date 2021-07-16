@@ -51,6 +51,7 @@
     left:100px;
     font-size: 350px;
     transition: 0.5s;
+    font-family: TekoLight;
 }
 
 @media (max-width:3000px){
