@@ -9,7 +9,6 @@ import Burger from './Burger/Burger';
 
 export default function Navbar(props) {
 
-
   return (
 
     <section id='nav-container' className="nav-container">

@@ -1,4 +1,4 @@
-import React from 'react'
+import {React,useEffect,useState} from 'react'
 import './Gallery5.css'
 
 import image1 from '../../images/lightning.png';
@@ -6,6 +6,24 @@ import image2 from '../../images/tui.png';
 
 
 export default function Gallery5() {
+
+    useEffect(()=>{
+
+        window.addEventListener('scroll', scrollAnimate);
+    
+        function scrollAnimate(){
+            let container = document.getElementById('g5-container');
+            let rect = container.getBoundingClientRect();
+            
+            if (rect.y > 1100){
+                container.style.top='500px';
+            } else {
+                container.style.top='0px';
+            }
+          }
+        
+    return ()=>window.removeEventListener('scroll',scrollAnimate);
+    })
 
     const card = [
         {src:image1, company:'BE LIGHTING', text: 'Delivering clarity on a global scale', action:'VIEW CASE'},
@@ -16,7 +34,10 @@ export default function Gallery5() {
         return (
         <div className="g5-wrapper">
             <li className="g5-li">
-               <img className="g5-img" src = {card.src} alt='card'></img>
+               <div className='g5-image-container'>
+               <img className="g5-img" src = {card.src} alt='card' key='g5-img'></img>
+               </div>
+               <div className='g5-text-container'>
                <p  className="g5-company">{card.company}</p>
                <p  className="g5-text">{card.text}</p>
                <div className='g5-action-container'>
@@ -25,13 +46,14 @@ export default function Gallery5() {
                </svg>
                     <p className='g5-action'>VIEW CASE</p>
                </div>
+               </div>
             </li>
         </div>
         )
     });
 
     return (
-        <section className='g5-container'>
+        <section id='g5-container' className='g5-container'>
             <ul className="g5-ul">{cardShow}</ul>
         </section>
     )

@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useEffect, useState} from 'react'
 import './Clients.css'
 
 import logo1 from '../../logos/Nivea_logo_zwart.jpg';
@@ -19,7 +19,25 @@ import logo15 from '../../logos/Walibi_logo_zwart.jpg';
 import logo16 from '../../logos/KLM_logo_zwart.jpg';
 
 
-export default function Gallery1() {
+export default function Clients() {
+
+    useEffect(()=>{
+
+        window.addEventListener('scroll', scrollAnimate);
+    
+        function scrollAnimate(){
+            let container = document.getElementById('clients-container');
+            let rect = container.getBoundingClientRect();
+           
+            if (rect.y > 1000){
+                container.style.top='500px';
+            } else {
+                container.style.top='0px';
+            }
+          }
+        
+    return ()=>window.removeEventListener('scroll',scrollAnimate);
+    })
 
     const card = [
         {src:logo1, alt:'logo1', key:logo1},
@@ -51,7 +69,7 @@ export default function Gallery1() {
     });
 
     return (
-        <section className='clients-container'>
+        <section id='clients-container' className='clients-container'>
             <h1 className='clients-heading'>CLIENTS</h1>
             <p className='clients-text'>We value a great working with our clients above all else. It's why they often come to our parties to. It's also why we're able to chanllenge and inspire them to reach the stars.</p>
             <ul className='clients-ul'>{cardShow}</ul>

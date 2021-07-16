@@ -2,12 +2,15 @@
 .g2-container{
     width:100%;
     height: 100%;
+    position: relative;
+    top:0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    transition: 0.5s;
 }
 .g2-ul{
     position: relative;
@@ -23,40 +26,52 @@
     width: 100%;
     height: 100%;
     list-style: none;
+}
 
+.g2-filter-text {
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:10px;
 }
 
 .g2-wrapper{
     position: relative;
+    width: 100%;
     height: 100%;
     flex-grow: 1;
     padding: 10px;
     margin-bottom: 40px;
-    transition: 0.5s;
+
 }
 
-.g2-wrapper:hover .g2-text {
-    font-size:40px;
-    transition: 0.5s;
+.g2-image-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
-.g2-wrapper:hover .g2-company{
-    font-size:20px;
-    transition: 0.5s;
+.g2-text-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.g2-wrapper:hover {
-    height:100%;
-    transition: 0.5s;
-}
 
 .g2-img{
     width: 100%;
-    height: 80%;
+    height: 100%;
     object-fit: cover;
     box-sizing: border-box;
     margin:0;
     border-radius: 0;
+    transition: 0.5s;
 }
 
 .g2-company{
@@ -64,7 +79,7 @@
     bottom: 0;
     left: 0;
     color: grey;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
     font-size: 80%;
     font-weight: bold;
@@ -76,10 +91,10 @@
     bottom: 0;
     left: 0;
     color: black;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 10px;
     font-family: TekoSemibold;
-    font-size: 20px;
+    font-size: 150%;
     transition: 0.5s;
 }
 
@@ -93,21 +108,57 @@
 }
 
 .g2-action{
+    position: relative;
     width: 50%;
     color: blue;
     font-size: 70%;
     font-weight: bold;
     margin: 0;
+    left:0;
+    text-decoration: none;
+    transition: 0.5s;
 }
 
 .g2-icon{
     width: 20px;
+    left:0;
+    position: relative;
+    transition: 0.5s;
 }
 
-.g2-li:hover {
-    background-color: white;
-    color: black;
+.g2-wrapper:hover .g2-text{
+    width: 90%;
+    left:5%;
+    font-size:40px;
+    transition: 0.5s;
 }
+
+.g2-wrapper:hover .g2-img{
+    width: 90%;
+    transition: 0.5s;
+}
+
+.g2-wrapper:hover .g2-company{
+    left:5%;
+    font-size:20px;
+    transition: 0.5s;
+}
+
+.g2-wrapper:hover .g2-action{
+    left:5%;
+    transition: 0.5s;
+}
+
+.g2-wrapper:hover .g2-icon{
+    left:5%;
+    transition: 0.5s;
+}
+
+.g2-wrapper:hover {
+    height:100%;
+    transition: 0.5s;
+}
+
 
 @media (max-width:3000px){
     .g2-container{
@@ -115,7 +166,14 @@
     }
 
     .g2-wrapper{
-        width:20%;
+        width:40%;
+    }
+
+    .g2-wrapper:hover .g2-text{
+        width: 90%;
+        left:5%;
+        font-size:36px;
+        transition: 0.5s;
     }
 }
 
@@ -126,6 +184,13 @@
 
     .g2-wrapper{
         width:40%;
+    }
+
+    .g2-wrapper:hover .g2-text{
+        width: 90%;
+        left:5%;
+        font-size:30px;
+        transition: 0.5s;
     }
 }
 
@@ -138,13 +203,3 @@
         width:100%;
     }
 }
-
-
-
-
-
-
-
-
-
-

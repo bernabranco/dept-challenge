@@ -3,6 +3,23 @@ import './ContactForm.css'
 
 export default function ContactForm(props) {
 
+    useEffect(()=>{
+
+        window.addEventListener('scroll', scrollAnimate);
+    
+        function scrollAnimate(){
+            let container = document.getElementById('contact-form-container');
+            let rect = container.getBoundingClientRect();
+            
+            if (rect.y > 1000){
+                container.style.top='500px';
+            } else {
+                container.style.top='0px';
+            }
+          }
+        
+    return ()=>window.removeEventListener('scroll',scrollAnimate);
+    })
 
     return (
 

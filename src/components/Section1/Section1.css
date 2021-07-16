@@ -5,11 +5,12 @@
 }
 
 .header-button{
-    width:150px;
+    width:250px;
     height:50px;
     position: absolute;
     bottom: 100px;
-    right:100px;
+    left:80%;
+    transform:translateX(-50%);
     background-color: black;
     font-weight: bold;
     color:white;
@@ -34,9 +35,14 @@
     background-image: url('../../images/header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position-x: right;
     background-position-y:center;
     transition: 0.5s;
+}
+
+.header-image-container{
+    display: flex;
+    justify-content: center;
 }
 
 .header-heading{
@@ -89,5 +95,4 @@
         background-position-y:center;
         transition: 0.5s;
     }
-  
 }

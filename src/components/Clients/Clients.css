@@ -2,12 +2,15 @@
 .clients-container{
     width:100%;
     height: 100%;
+    position: relative;
+    top:0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgba(245,245,245,255);
+    transition: 0.5s;
 }
 .clients-ul{
     position: relative;

@@ -1,5 +1,5 @@
-import React from 'react'
-import './Gallery1.css'
+import {React, useEffect,useState} from 'react';
+import './Gallery1.css';
 
 import image1 from '../../images/bolcom.png';
 import image2 from '../../images/kempen.png';
@@ -8,6 +8,24 @@ import image4 from "../../images/gemeentemuseum.png";
 
 
 export default function Gallery1() {
+
+    useEffect(()=>{
+
+        window.addEventListener('scroll', scrollAnimate);
+    
+        function scrollAnimate(){
+            let container = document.getElementById('g1-container');
+            let rect = container.getBoundingClientRect().y;
+    
+            if (window.pageYOffset > rect-300){
+              container.style.top='0';
+            } else {
+              container.style.top='500px';
+            }
+          }
+        
+    return ()=>window.removeEventListener('scroll',scrollAnimate);
+    })
 
     const card = [
         {src:image1, company:'BOLCOM', text: 'A summer island in the Netherlands', action:'VIEW CASE'},
@@ -20,7 +38,10 @@ export default function Gallery1() {
         return (
         <div className="g1-wrapper">
             <li className="g1-li">
-               <img className="g1-img" src = {card.src} alt='card'></img>
+              <div className='g1-image-container'>
+               <img className="g1-img" src = {card.src} alt='card' key='card-img'></img>
+              </div>
+              <div id='g1-text-container' className='g1-text-container'>
                <p  className="g1-company">{card.company}</p>
                <p  className="g1-text">{card.text}</p>
                <div className='g1-action-container'>
@@ -29,13 +50,14 @@ export default function Gallery1() {
                </svg>
                     <p className='g1-action'>VIEW CASE</p>
                </div>
+               </div>
             </li>
         </div>
         )
     });
 
     return (
-        <section className='g1-container'>
+        <section id ='g1-container' className='g1-container'>
             <ul className="g1-ul">{cardShow}</ul>
         </section>
     )

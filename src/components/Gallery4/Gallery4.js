@@ -1,10 +1,28 @@
-import React from 'react'
+import {React,useEffect,useState} from 'react'
 import './Gallery4.css'
 
 import image1 from '../../images/header.jpg';
 
 
 export default function Gallery4() {
+
+    useEffect(()=>{
+
+        window.addEventListener('scroll', scrollAnimate);
+    
+        function scrollAnimate(){
+            let container = document.getElementById('g4-container');
+            let rect = container.getBoundingClientRect();
+            
+            if (rect.y > 1000){
+                container.style.top='500px';
+            } else {
+                container.style.top='0px';
+            }
+          }
+        
+    return ()=>window.removeEventListener('scroll',scrollAnimate);
+    })
 
     const card = [
         {src:image1, company:'FLORENSIS', text: 'Rethinking the entire online ecosystem', action:'VIEW CASE'},
@@ -13,11 +31,11 @@ export default function Gallery4() {
     ];
 
     return (
-        <section className='g4-container'>
+        <section id='g4-container' className='g4-container'>
             <ul className="g4-ul">
             <div className="g4-wrapper">
             <li className="g4-li">
-               <img className="g4-img" src = {image1} alt=''></img>
+               <img className="g4-img" src = {image1} alt='' key='g4-img'></img>
                <p  className="g4-company">{card[0].company}</p>
                <p  className="g4-text">{card[0].text}</p>
                <div className='g4-action-container'>
@@ -27,8 +45,9 @@ export default function Gallery4() {
                     <p className='g4-action'>VIEW CASE</p>
                </div>
             </li>
-        </div>
+            </div>
         <div className="g4-wrapper">
+        <div className='g4-li-container'>
             <li className="g4-li-no-image">
                <p  className="g4-company">{card[1].company}</p>
                <p  className="g4-text">{card[1].text}</p>
@@ -39,6 +58,8 @@ export default function Gallery4() {
                     <p className='g4-action'>VIEW CASE</p>
                </div>
             </li>
+            </div>
+            <div className='g4-li-container'>
             <li className="g4-li-no-image">
                <p  className="g4-company">{card[2].company}</p>
                <p  className="g4-text">{card[2].text}</p>
@@ -49,6 +70,7 @@ export default function Gallery4() {
                     <p className='g4-action'>VIEW CASE</p>
                </div>
             </li>
+           </div>
         </div>
        
       

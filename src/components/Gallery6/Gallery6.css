@@ -2,6 +2,8 @@
 .g4-container{
     width:100%;
     height: 100%;
+    position: relative;
+    top:0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -9,6 +11,15 @@
     align-items: center;
     margin-bottom: 50px;
 }
+
+.g4-li-container{
+   width:100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
 .g4-ul{
     position: relative;
     display: flex;
@@ -28,7 +39,7 @@
 
 .g4-li-no-image{
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 40%;
     list-style: none;
     border-bottom-style: solid;
@@ -67,7 +78,7 @@
     color: grey;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 80%;
+    font-size: 14px;
     font-weight: bold;
     transition: 0.5s;
 }
@@ -113,10 +124,16 @@
 @media (max-width:3000px){
     .g4-container{
         width:100%;
+        transition: 0.5s;
     }
 
     .g4-wrapper{
         width:20%;
+    }
+
+    .g4-text{
+        font-size: 30px;
+        transition: 0.5s;
     }
 
     .g4-container:hover .g4-text{
@@ -126,7 +143,7 @@
     
     .g4-container:hover .g4-company{
         font-size:20px;
-        transition: 0.5s;
+        transition: 0.5s ease all;
     }
 }
 
@@ -139,14 +156,19 @@
         width:40%;
     }
 
-    .g4-container:hover .g4-text{
-        font-size:27px;
+    .g4-text{
+        font-size: 20px;
         transition: 0.5s;
+    }
+
+    .g4-container:hover .g4-text{
+        font-size:24px;
+        transition: 0.5s ease all;
     }
     
     .g4-container:hover .g4-company{
         font-size:13px;
-        transition: 0.5s;
+        transition: 0.5s ease all;
     }
 }
 
@@ -157,6 +179,22 @@
 
     .g4-wrapper{
         width:100%;
+    }
+
+    .g4-text{
+        font-size: 18px;
+        transition: 0.5s;
+    }
+
+    .g4-li-no-image{
+        position: relative;
+        width: 70%;
+
+    }
+
+    .g4-container:hover .g4-text{
+        font-size:24px;
+        transition: 0.5s ease all;
     }
 
     .g4-li-no-image{

@@ -1,4 +1,4 @@
-import React from 'react'
+import {React,useEffect,useState} from 'react'
 import './Gallery2.css'
 
 import image1 from '../../images/chocomel.png';
@@ -9,6 +9,24 @@ import icon from "../../icons/icon-dropdown.svg"
 
 
 export default function Gallery2() {
+
+    useEffect(()=>{
+
+        window.addEventListener('scroll', scrollAnimate);
+    
+        function scrollAnimate(){
+            let container = document.getElementById('g2-container');
+            let rect = container.getBoundingClientRect();
+            
+            if (rect.y > 1100){
+                container.style.top='500px';
+            } else {
+                container.style.top='0px';
+            }
+          }
+        
+    return ()=>window.removeEventListener('scroll',scrollAnimate);
+    })
 
     const card = [
         {src:image1, company:'CHOCOMEL', text: 'A campaign for the limited edition letter packs', action:'VIEW CASE'},
@@ -21,7 +39,10 @@ export default function Gallery2() {
         return (
         <div className="g2-wrapper">
             <li className="g2-li">
-               <img className="g2-img" src = {card.src} alt='card'></img>
+              <div className='g2-image-container'>
+               <img className="g2-img" src = {card.src} alt='card' key='g2-img'></img>
+               </div>
+               <div className='g2-text-container'>
                <p  className="g2-company">{card.company}</p>
                <p  className="g2-text">{card.text}</p>
                <div className='g2-action-container'>
@@ -30,13 +51,14 @@ export default function Gallery2() {
                </svg>
                     <p className='g2-action'>VIEW CASE</p>
                </div>
+               </div>
             </li>
         </div>
         )
     });
 
     return (
-        <section className='g2-container'>
+        <section id='g2-container' className='g2-container'>
             <ul className="g2-ul">{cardShow}</ul>
         </section>
     )

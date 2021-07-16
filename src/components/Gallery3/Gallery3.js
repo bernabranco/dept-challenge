@@ -1,12 +1,28 @@
-import React from 'react'
+import {React, useEffect, useState} from 'react'
 import './Gallery3.css'
 
 import image1 from '../../images/liberty-global.png';
 import image2 from '../../images/arla.png';
-import icon from "../../icons/icon-dropdown.svg"
-
 
 export default function Gallery3() {
+
+    useEffect(()=>{
+
+        window.addEventListener('scroll', scrollAnimate);
+    
+        function scrollAnimate(){
+            let container = document.getElementById('g3-container');
+            let rect = container.getBoundingClientRect();
+            
+            if (rect.y > 1000){
+                container.style.top='500px';
+            } else {
+                container.style.top='0px';
+            }
+          }
+        
+    return ()=>window.removeEventListener('scroll',scrollAnimate);
+    })
 
     const card = [
         {src:image1, company:'LIBERTY GLOBAL', text: 'Delivering complex commerce solutions', action:'VIEW CASE'},
@@ -17,7 +33,10 @@ export default function Gallery3() {
         return (
         <div className="g3-wrapper">
             <li className="g3-li">
-               <img className="g3-img" src = {card.src} alt='card'></img>
+               <div className='g3-image-container'>
+               <img className="g3-img" src = {card.src} alt='card' key='g3-image'></img>
+               </div>
+               <div className='g3-text-container'>
                <p  className="g3-company">{card.company}</p>
                <p  className="g3-text">{card.text}</p>
                <div className='g3-action-container'>
@@ -26,14 +45,15 @@ export default function Gallery3() {
                </svg>
                     <p className='g3-action'>VIEW CASE</p>
                </div>
+               </div>
             </li>
         </div>
         )
     });
 
     return (
-        <section className='g3-container'>
-            <div className='g3-text-container'>
+        <section id='g3-container' className='g3-container'>
+            <div className='g3-quote-container'>
                 <p className='g3-quote'>"Dept helped us tell our story through a bold new identity and a robust online experience. To the tune of 60% growth in online bookings in just one month."</p>
                 <p className='g3-author'>MATTIJS TEN BRINK - CEO, TRANSAVIA</p>
             </div>
