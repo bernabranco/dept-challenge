@@ -5,7 +5,7 @@ Tecnologies used:
 - React
 
 To run this project locally, run the following commands:
-- git clone https://github.com/claudiolemos/dept-contest.git
+- git clone https://github.com/bernabranco/dept-challenge.git
 - cd dept-contest
 - npm install
 - npm start
