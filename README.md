@@ -10,6 +10,6 @@ To run this project locally, run the following commands:
 - npm install
 - npm start
 
-On the browser, access localhost:3000/work
+On the browser, access localhost:3000
 
 
