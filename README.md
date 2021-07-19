@@ -6,7 +6,7 @@ Tecnologies used:
 
 To run this project locally, run the following commands:
 - git clone https://github.com/bernabranco/dept-challenge.git
-- cd dept-contest
+- cd dept-challenge
 - npm install
 - npm start
 
